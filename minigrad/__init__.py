@@ -1,1 +1,1 @@
-# @TODO
+from minigrad.tensor import Tensor
