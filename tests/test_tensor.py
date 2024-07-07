@@ -1,5 +1,6 @@
 import unittest
 import numpy as np
+
 from minigrad.tensor import Tensor
 
 class TestTensor(unittest.TestCase):
@@ -63,9 +64,6 @@ class TestTensor(unittest.TestCase):
     if x.grad is not None and y.grad is not None:
       np.testing.assert_array_almost_equal(x.grad, np.array([4, 1.25, 0.666667]), decimal=5)
       np.testing.assert_array_almost_equal(y.grad, np.array([-1, -0.5, -1/3]), decimal=5)
-
-
-
 
 if __name__ == '__main__':
   unittest.main()

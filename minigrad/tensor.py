@@ -5,7 +5,7 @@ import numpy as np
 
 class Tensor:
   def __init__(self, data, requires_grad=False, _children=()):
-    self.data = np.array(data)
+    self.data = np.array(data, dtype=np.float64)
     self.requires_grad = requires_grad
     self.grad = None
     self._backward = lambda: None
